@@ -11,3 +11,4 @@ This is the [Library project](https://www.theodinproject.com/paths/full-stack-ja
 - [x] Add toggle switch
 - [x] Wrap title and author(s) with too many characters
 - [ ] Add a review section
+- [ ] Style add new book form

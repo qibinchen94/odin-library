@@ -42,7 +42,7 @@ function addBookToLibrary() {
     const book = new Book(title, author, pages, isRead);
     myLibrary.push(book);
 
-    // Create a slider switch for read status
+    // Create a toggle switch for read status
     const input = document.createElement('input');
     input.type = 'checkbox';
     input.dataset.index = `${myLibrary.length -1}`;
@@ -59,13 +59,15 @@ function addBookToLibrary() {
     
     // Create a 'remove' button
     const btn = document.createElement('button');
-    btn.textContent = 'remove';
+    btn.textContent = 'Remove';
+    btn.classList.add('remove-btn')
     btn.dataset.index = `${myLibrary.length - 1}`;
     btn.addEventListener('click', removeFromLibrary);
     
     // Insert new row to the library table
     const row = libraryTable.insertRow(myLibrary.length);
     row.dataset.index = `${myLibrary.length - 1}`;
+    row.classList.add('hover-enabled');
     row.insertCell(0).textContent = title;
     row.insertCell(1).textContent = author;
     row.insertCell(2).textContent = pages;
